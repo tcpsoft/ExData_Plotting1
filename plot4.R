@@ -1,7 +1,7 @@
 ## In this script we will read in a file, subset only the dates we want to 
 ## display, and create a four power graphs in a 2x2 format
 
-## Read in household power consumption data
+## Read in the household power consumption data
 ## This script leaves date and time in char format for the time being
 ## to be converted and concatenated into a single column in a later step
 
@@ -59,5 +59,5 @@ plot(elec_subset$datetime, elec_subset$Global_reactive_power, type = "n", xlab =
 ## Add lines to Global Reactive Power graph in step format
 lines(elec_subset$datetime, elec_subset$Global_reactive_power, type = "s")
 
-## Close PNG device
+## Close the PNG device
 dev.off()

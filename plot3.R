@@ -9,7 +9,7 @@ elec_data <- read.table("household_power_consumption.txt", header = TRUE,
   sep = ";", colClasses = c("character", "character", "numeric", "numeric", 
   "numeric", "numeric", "numeric", "numeric", "numeric"), na.strings = "?")
 
-## Select only two required dates
+## Select only the two required dates
 elec_subset <- subset(elec_data, Date %in% c("1/2/2007", "2/2/2007"))
 
 ## Create a variable to concatenate the date and time string fields
@@ -35,5 +35,5 @@ lines(elec_subset$datetime, elec_subset$Sub_metering_3, type = "s", col="BLUE")
 legend('topright', c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
        col = c('BLACK', 'RED', 'BLUE'), lty = 1)
 
-## Close PNG device
+## Close the PNG device
 dev.off()

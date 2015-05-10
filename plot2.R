@@ -1,7 +1,7 @@
 ## In this script we will read in a file, subset only the dates we want to 
 ## display, and create a stepped line graph of the Global Active Power 
 
-## Read in household power consumption data
+## Read in the household power consumption data
 ## This script leaves date and time in char format for the time being
 ## to be converted and concatenated into a single column in a later step
 
@@ -29,5 +29,5 @@ plot(elec_subset$datetime, elec_subset$Global_active_power, type = "n",
 ## Add lines to graph in step format
 lines(elec_subset$datetime, elec_subset$Global_active_power, type = "s")
 
-## Close PNG device
+## Close the PNG device
 dev.off()
