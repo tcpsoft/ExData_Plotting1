@@ -19,3 +19,4 @@ hist(elec_subset$Global_active_power, xlab = "Global Active Power (kilowatts)",
 
 ## Close PNG device
 dev.off()
+
